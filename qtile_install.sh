@@ -11,12 +11,12 @@ deb http://deb.debian.org/debian-security/      bookworm-security               
 #deb http://deb.debian.org/debian                bookworm-proposed-updates       main contrib non-free non-free-firmware
 EOF'
 
-sudo apt-get update && sudo apt-get -y install git build-essential \
-	python3-venv libxkbcommon-dev lightdm lm-sensors alacritty stow \
-	locales bat
+sudo apt-get update && sudo apt-get -y install build-essential \
+	libxkbcommon-dev lightdm lm-sensors alacritty stow \
+	bat xserver-xorg xinit libpangocairo-1.0-0 \
+	python3-pip python3-venv python3-xcffib python3-cairocffi
 
 sudo python3 -m venv /opt/qtile --upgrade-deps
-sudo /opt/qtile/bin/pip install --no-cache-dir cairocffi
 sudo /opt/qtile/bin/pip install qtile
 
 sudo $SHELL -c 'cat <<EOF> /usr/share/xsessions/qtile.desktop
