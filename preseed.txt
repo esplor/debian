@@ -7,14 +7,14 @@
 d-i debian-installer/locale string C
 
 # The values can also be preseeded individually for greater flexibility.
-d-i debian-installer/language string no
-d-i debian-installer/country string NO
+#d-i debian-installer/language string no
+#d-i debian-installer/country string NO
 d-i debian-installer/locale string C.UTF-8
 # Optionally specify additional locales to be generated.
 d-i localechooser/supported-locales multiselect en_US.UTF-8, nb_NO.UTF-8
 
 # Keyboard selection.
-#d-i keyboard-configuration/xkb-keymap select us
+d-i keyboard-configuration/xkb-keymap select no
 # d-i keyboard-configuration/toggle select No toggling
 
 ### Network configuration
