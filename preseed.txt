@@ -106,7 +106,7 @@ d-i hw-detect/load_firmware boolean true
 # Default value for the mirror protocol: http.
 #d-i mirror/protocol string ftp
 d-i mirror/country string manual
-d-i mirror/http/hostname string http.no.debian.org
+d-i mirror/http/hostname string ftp.no.debian.org
 d-i mirror/http/directory string /debian
 d-i mirror/http/proxy string
 
